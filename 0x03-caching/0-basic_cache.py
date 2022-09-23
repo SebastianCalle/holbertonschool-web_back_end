@@ -6,7 +6,10 @@ from base_caching import BaseCaching
 
 
 class BasicCache(BaseCaching):
-
+    """ BasicCaching defines:
+      - constants of your caching system
+      - where your data are stored (in a dictionary)
+    """
     def __init__(self):
         """ Initialize
         """
@@ -22,6 +25,3 @@ class BasicCache(BaseCaching):
         """ Get an item by key
         """
         return self.cache_data.get(key)
-
-
-
