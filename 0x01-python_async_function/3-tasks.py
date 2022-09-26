@@ -1,0 +1,18 @@
+#!/usr/bin/env python3
+"""
+    Module with function measure_time
+"""
+import asyncio
+
+wait_random = __import__('0-basic_async_syntax').wait_random
+
+
+def task_wait_random(max_delay: int) -> asyncio.Task:
+    """
+    Args:
+        max_delay:  max delay
+
+    Returns:
+        float
+    """
+    return asyncio.Task(wait_random(max_delay))
