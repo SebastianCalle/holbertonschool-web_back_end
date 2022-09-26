@@ -5,10 +5,10 @@
 from typing import Callable
 
 
-def make_multiplier(m: float) -> Callable[[float], float]:
+def make_multiplier(multiplier: float) -> Callable[[float], float]:
     """
         Args:
-            m: str parameter
+            multiplier: str parameter
         Return:
             Callable
     """
@@ -20,6 +20,6 @@ def make_multiplier(m: float) -> Callable[[float], float]:
             Return:
                 float multiplication
         """
-        return m * n
+        return n * multiplier
 
     return multiplication
