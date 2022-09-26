@@ -2,8 +2,8 @@
 """
     Module basic asyncio
 """
+import asyncio
 import random
-from time import sleep
 
 
 async def wait_random(max_delay: int = 10) -> float:
@@ -15,5 +15,5 @@ async def wait_random(max_delay: int = 10) -> float:
         float sleep
     """
     delay = random.uniform(0, max_delay)
-    sleep(delay)
+    await asyncio.sleep(delay)
     return delay
